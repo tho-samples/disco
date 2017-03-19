@@ -1,0 +1,10 @@
+<md-list>
+    <md-list-item *ngFor="let artist of artists">
+        <img md-list-avatar [alt]="artist.name" [src]="artist.avatar">
+        <h3 md-line> {{artist.name}} </h3>
+        <p md-line>
+            <span> {{artist.yearBorn}} - {{artist.yearDied}} </span>
+            <span class="demo-2"> -- {{artist.bio}} </span>
+        </p>
+    </md-list-item>
+</md-list>

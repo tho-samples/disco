@@ -1,0 +1,19 @@
+<material-sidenav [(open)]="open">
+    <div id="menu">
+        <menu-item [routerLink]="['Artists/List']" icon="library_music">Artists</menu-item>
+        <menu-item [routerLink]="['FavoriteAlbums']" icon="album">Favorite Albums</menu-item>
+        <menu-separator></menu-separator>
+        <menu-item icon="code">View Source Code</menu-item>
+    </div>
+</material-sidenav>
+<material-toolbar icon="menu" (iconClick)="open = !open" title="Disco">
+    <div class="right-content">
+        <!-- Right-side content -->
+        <material-button icon>
+            <glyph icon="search"></glyph>
+        </material-button>
+    </div>
+</material-toolbar>
+<div>
+    <router-outlet (activate)="open = false"></router-outlet>
+</div>
